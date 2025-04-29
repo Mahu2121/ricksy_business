@@ -1,16 +1,15 @@
+
 package edu.estatuas;
 
 import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 /**
  * Unit test for simple App.
- */
+ */ /*
 public classimport static org.junit.Assert.*;
 
 public class UfosParkTest {
-
+    /*
     UfosPark ufos = null;
     String[] ovnis = { "unx", "dox", "trex" };
 
@@ -18,6 +17,7 @@ public class UfosParkTest {
      * Testea el metodo añadir ovni
      * a la flota de ufos
      */
+    /*
     @Test
     public void addUfoTest() {
     }
@@ -28,6 +28,7 @@ public class UfosParkTest {
      * de crédito.
      * El crédito de la tarjeta varía.
      */
+    /*
     @Test
     public void dispatchTest() {
     }
@@ -37,6 +38,7 @@ public class UfosParkTest {
      * si no hay crédito suficiente en la tarjeta.
      * El crédito de la tarjeta no varía.
      */
+    /*
     @Test
     public void dispatchNoCreditTest() {
     }
@@ -46,6 +48,7 @@ public class UfosParkTest {
      * si ya existe un ovni reservado para esa tarjeta.
      * El crédito de la tarjeta no varía.
      */
+    /*
     @Test
     public void dispatchUfoAlreadyReservedTest() {
     }
@@ -55,6 +58,7 @@ public class UfosParkTest {
      * si no existe ninguno disponible (sin reservar).
      * El crédito de la tarjeta no varía.
      */
+    /*
     @Test
     public void dispatchNoUfoAvaliableTest() {
     }
@@ -62,7 +66,9 @@ public class UfosParkTest {
     /**
      * Devuelve el UFO reservado para la tarjeta.
      */
+    /*
     @Test
     public void getUfoOfTest() {
     }
 }
+*/

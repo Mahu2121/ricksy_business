@@ -35,7 +35,7 @@ public class RicksyBusiness {
          * Como es una AndromedanExpress
          * el crédito inicial es de 3000 EZIS
          */
-        
+
 
         CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
 
@@ -52,12 +52,12 @@ public class RicksyBusiness {
          * de los que estén libres.
          * El coste del ovni es de 500 EZIs.
          */
-        /**
+
 
         UfosPark ufosPark = new UfosPark();
 
         // Da de alta en la flota de ovnis 2 UFOS.
-        /**
+
 
         String[] ufosID = { "unx", "dox" };
         for (String ovni : ufosID) {
@@ -70,9 +70,9 @@ public class RicksyBusiness {
         // Mostramos el ID del ovni asignado a Abradolph
         System.out.println("\nOvni de Abradolph\n" +
                 "=================");
-        /**
-        System.out.println(ufosPark.getUfoOf(abradolph.number()));
 
+        System.out.println(ufosPark.getUfoOf(abradolph.number()));
+    /*
         // Mostramos el credito de la tarjeta de Abradolph
         System.out.println("Credito de Abradolph: " + abradolph.credit());
 
@@ -238,5 +238,7 @@ public class RicksyBusiness {
         System.out.println(card);
         System.out.println("Packs: " + expender.stock());
         System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
+    }
+         */
     }
 }
