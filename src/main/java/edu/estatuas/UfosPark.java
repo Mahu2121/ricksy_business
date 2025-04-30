@@ -1,33 +1,38 @@
 package edu.estatuas;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.HashMap;
+
+import java.util.Map;
 
 public class UfosPark {
-    private List<String> flota;
+    private Map<String, CreditCard> flota;
 
     UfosPark() {
-        flota = new ArrayList<String>();
+        flota = new HashMap<>();
     }
 
     public void add(String ufo) {
-        flota.add(ufo);
+        flota.put(ufo,null);
     }
 
+
     public void dispatch(CreditCard cc) {
-        flota.add(cc.number())  ;
-        flota.remove(flota.size() - 1);
+        for (String ufo : flota.keySet()) {
+            if (flota.get(ufo) == null) {
+                flota.put(ufo,cc);
+                break;
+            }
+        }
     }
 
     public String getUfoOf(String number) {
-        for (int i = 0; i < flota.size(); i++) {
-            if (flota.get(i).contains(number)) {
-                return flota.get(i);
+        for (String ufo : flota.keySet()) {
+            if (flota.get(ufo).number().equals(number)) {
+                return ufo;
             }
-        }
-        return null;
+        } return null;
     }
-
 
 
 
