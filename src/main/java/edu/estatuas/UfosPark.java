@@ -20,6 +20,7 @@ public class UfosPark {
     public void dispatch(CreditCard cc) {
         for (String ufo : flota.keySet()) {
             if (flota.get(ufo) == null) {
+                cc.setCredit(cc.credit());
                 flota.put(ufo,cc);
                 break;
             }

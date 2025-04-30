@@ -27,6 +27,13 @@ public class CreditCard {
         return number;
     }
 
+    public double credit() {
+        return credit;
+    }
+
+    public void setCredit(double credit) {
+    this.credit = credit - 500.0;}
+
     @Override
     public String toString() {
         return "owner:" + getName() + "\n" + "number:" + getNumber() + "\n" + "credit:" + getCredit();
