@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 import java.util.Map;
 
-public class UfosPark {
+public class UfosPark implements GuestDispatcher{
 
     private Map<String, CreditCard> flota;
 
@@ -17,7 +17,7 @@ public class UfosPark {
         flota.put(ufo, null);
     }
 
-
+    @Override
     public void dispatch(CreditCard cc) {
         if (!cc.isAssigned() && cc.credit() > 500.0){
             for (String ufo : flota.keySet()) {
