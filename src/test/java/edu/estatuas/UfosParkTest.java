@@ -1,25 +1,32 @@
 
 package edu.estatuas;
 
-import junit.framework.Test;
-
 /**
  * Unit test for simple App.
- */ /*
-public classimport static org.junit.Assert.*;
+ */
+import org.junit.AfterClass;
+import org.junit.Test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.Assert.*;
 
 public class UfosParkTest {
-    /*
-    UfosPark ufos = null;
-    String[] ovnis = { "unx", "dox", "trex" };
 
     /**
      * Testea el metodo añadir ovni
      * a la flota de ufos
      */
-    /*
+
     @Test
     public void addUfoTest() {
+        UfosPark ufos = new UfosPark();
+        String[] ovnis = { "unx", "dox", "trex" };
+        for (String ovni : ovnis) {
+            ufos.add(ovni);
+        }
+        assertEquals("[trex, dox, unx]", ufos.toString());
     }
 
     /**
@@ -28,9 +35,19 @@ public class UfosParkTest {
      * de crédito.
      * El crédito de la tarjeta varía.
      */
-    /*
+
     @Test
     public void dispatchTest() {
+        UfosPark ufos = new UfosPark();
+        String[] ovnis = { "unx", "dox", "trex" };
+        for (String ovni : ovnis) {
+            ufos.add(ovni);
+        }
+        CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
+        ufos.dispatch(abradolph);
+
+        assertEquals("trex",ufos.getUfoOf(abradolph.number()));
+
     }
 
     /**
@@ -70,5 +87,5 @@ public class UfosParkTest {
     @Test
     public void getUfoOfTest() {
     }
+    */
 }
-*/
