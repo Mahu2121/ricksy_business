@@ -35,12 +35,18 @@ public class CreditCard {
     public Boolean isAssigned() {
         return assigned;
     }
+
     public void setAssigned(Boolean assigned) {
         this.assigned = assigned;
     }
 
-    public void reduceCredit(double credit) {
-    this.credit = credit - 500.0;}
+    public void payUfo(CreditCard credit) {
+        this.credit = credit.credit() - 500.0;
+    }
+
+    public void payPack(CreditCard credit) {
+        this.credit = credit.credit() - 50.0;
+    }
 
     public void pay(double money) {
         credit = credit - money;

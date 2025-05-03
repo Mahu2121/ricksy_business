@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UfosPark {
+
     private Map<String, CreditCard> flota;
 
     UfosPark() {
@@ -21,7 +22,7 @@ public class UfosPark {
         if (!cc.isAssigned() && cc.credit() > 500.0){
             for (String ufo : flota.keySet()) {
                 if (flota.get(ufo) == null) {
-                    cc.reduceCredit(cc.credit());
+                    cc.payUfo(cc);
                     flota.put(ufo, cc);
                     cc.setAssigned(true);
                     break;
