@@ -4,6 +4,7 @@ public class CreditCard {
     private String name;
     private String number;
     private double credit = 3000.0;
+    private Boolean assigned = false;
 
 
     CreditCard(String name, String number) {
@@ -31,7 +32,14 @@ public class CreditCard {
         return credit;
     }
 
-    public void setCredit(double credit) {
+    public Boolean isAssigned() {
+        return assigned;
+    }
+    public void setAssigned(Boolean assigned) {
+        this.assigned = assigned;
+    }
+
+    public void reduceCredit(double credit) {
     this.credit = credit - 500.0;}
 
     @Override
