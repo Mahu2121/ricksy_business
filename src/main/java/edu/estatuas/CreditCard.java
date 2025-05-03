@@ -42,6 +42,10 @@ public class CreditCard {
     public void reduceCredit(double credit) {
     this.credit = credit - 500.0;}
 
+    public void pay(double money) {
+        credit = credit - money;
+    }
+
     @Override
     public String toString() {
         return "owner:" + getName() + "\n" + "number:" + getNumber() + "\n" + "credit:" + getCredit();
