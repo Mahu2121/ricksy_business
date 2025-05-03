@@ -18,7 +18,7 @@ public class UfosPark {
 
 
     public void dispatch(CreditCard cc) {
-        if (cc.isAssigned() == false){
+        if (!cc.isAssigned() && cc.credit() > 500.0){
             for (String ufo : flota.keySet()) {
                 if (flota.get(ufo) == null) {
                     cc.reduceCredit(cc.credit());
@@ -32,12 +32,15 @@ public class UfosPark {
 
     public String getUfoOf(String number) {
         for (String ufo : flota.keySet()) {
-            if (flota.get(ufo).number().equals(number)) {
+            if (flota.get(ufo) != null && flota.get(ufo).number().equals(number)) {
                 return ufo;
             }
         } return null;
     }
 
-
+    @Override
+    public String toString() {
+        return "" + flota.keySet() ;
+    }
 
 }
