@@ -9,9 +9,16 @@ public class CrystalExpender implements GuestDispatcher {
         this.itemCost = itemCost;
     }
 
+    public int stock() {
+        return stock;
+    }
+
     @Override
     public void dispatch(CreditCard creditCard) {
-        creditCard.payPack(creditCard);
+        if (creditCard.credit() > this.itemCost) {
+            creditCard.payPack(creditCard);
+            stock -= 1;
+        }
     }
 
     @Override
