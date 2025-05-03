@@ -13,16 +13,19 @@ public class UfosPark {
     }
 
     public void add(String ufo) {
-        flota.put(ufo,null);
+        flota.put(ufo, null);
     }
 
 
     public void dispatch(CreditCard cc) {
-        for (String ufo : flota.keySet()) {
-            if (flota.get(ufo) == null) {
-                cc.setCredit(cc.credit());
-                flota.put(ufo,cc);
-                break;
+        if (cc.isAssigned() == false){
+            for (String ufo : flota.keySet()) {
+                if (flota.get(ufo) == null) {
+                    cc.reduceCredit(cc.credit());
+                    flota.put(ufo, cc);
+                    cc.setAssigned(true);
+                    break;
+                }
             }
         }
     }
