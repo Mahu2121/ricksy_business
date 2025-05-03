@@ -91,22 +91,22 @@ public class RicksyBusiness {
         // mientras le daba la chapa, justo antes de pagar el ovni.
         // Intenta reservarlo y el componente de reserva de ovnis
         // no le asigna ninguno.
-        /**
+
 
         System.out.println("\nLLega GearHead!\n" +
                 "===============");
-        /**
+
         CreditCard gearHead = new CreditCard("Gearhead", "8888888888888888");
 
         gearHead.pay(3000); // le vacían la cartera
-        /**
+
         ufosPark.dispatch(gearHead);
         System.out.println("Su credito es cero: " + gearHead.credit());
         System.out.println("No puede reservar ovni: " + ufosPark.getUfoOf(gearHead.number()));
 
         // Squanchy deja su ovni reservado
         // antes de irse a squanchear
-        /**
+
         System.out.println("\nLLega Squanchy!\n" +
                 "==============");
         CreditCard squanchy = new CreditCard("Squanchy", "4444444444444444");
@@ -119,7 +119,7 @@ public class RicksyBusiness {
 
         System.out.println("\nAlgun ovni para Morty?\n" +
                 "======================");
-        /**
+
         CreditCard morty = new CreditCard("Morty", "0000000000000000");
         ufosPark.dispatch(morty);
         System.out.println("Su credito no ha cambiado: " + morty.credit());
@@ -127,7 +127,7 @@ public class RicksyBusiness {
 
         // Metemos un ovni más en la flota de ovnis
         // y mostramos la flota por consola
-        /**
+        
         System.out.println("\nFlota de ovnis\n" +
                 "==============");
         ufosPark.add("trex");
