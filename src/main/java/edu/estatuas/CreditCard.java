@@ -50,6 +50,9 @@ public class CreditCard {
 
     public void pay(double money) {
         credit = credit - money;
+        if (credit < 0) {
+            credit = 0.0;
+        }
     }
 
     @Override
