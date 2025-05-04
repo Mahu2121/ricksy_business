@@ -4,7 +4,6 @@ package edu.estatuas;
 /**
  * Unit test for simple App.
  */
-import org.junit.AfterClass;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -55,9 +54,18 @@ public class UfosParkTest {
      * si no hay crédito suficiente en la tarjeta.
      * El crédito de la tarjeta no varía.
      */
-    /*
+
     @Test
     public void dispatchNoCreditTest() {
+        UfosPark ufos = new UfosPark();
+        String[] ovnis = { "unx", "dox", "trex" };
+        for (String ovni : ovnis) {
+            ufos.add(ovni);
+        }
+        CreditCard fer = new CreditCard("Ferdinan", "3691611971192321");
+        fer.pay(3000.0);
+        ufos.dispatch(fer);
+        assertNull(ufos.getUfoOf(fer.number()));
     }
 
     /**
@@ -65,9 +73,25 @@ public class UfosParkTest {
      * si ya existe un ovni reservado para esa tarjeta.
      * El crédito de la tarjeta no varía.
      */
-    /*
+
     @Test
     public void dispatchUfoAlreadyReservedTest() {
+        UfosPark ufos = new UfosPark();
+        String[] ovnis = { "unx", "dox", "trex" };
+        for (String ovni : ovnis) {
+            ufos.add(ovni);
+        }
+        CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
+        ufos.dispatch(abradolph);
+
+        assertEquals("trex",ufos.getUfoOf(abradolph.number()));
+
+       ufos.dispatch(abradolph);
+
+       assertEquals("trex",ufos.getUfoOf(abradolph.number()));
+
+
+
     }
 
     /**
@@ -75,17 +99,26 @@ public class UfosParkTest {
      * si no existe ninguno disponible (sin reservar).
      * El crédito de la tarjeta no varía.
      */
-    /*
+
     @Test
     public void dispatchNoUfoAvaliableTest() {
-    }
+        UfosPark ufos = new UfosPark();
+        String[] ovnis = { "unx", "dox", "trex" };
+        for (String ovni : ovnis) {
+            ufos.add(ovni);
+        }
+        CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
+        CreditCard fer = new CreditCard("Ferdinan Fernandez", "3691611971192321");
+        CreditCard manu = new CreditCard("Manuel Escobilla", "5641312971101331");
+        CreditCard nuno = new CreditCard("Nuno Venavides", "9765423922761831");
 
-    /**
-     * Devuelve el UFO reservado para la tarjeta.
-     */
-    /*
-    @Test
-    public void getUfoOfTest() {
+        ufos.dispatch(abradolph);
+        ufos.dispatch(fer);
+        ufos.dispatch(manu);
+        ufos.dispatch(nuno);
+
+        assertNull(ufos.getUfoOf(nuno.number()));
+
+
     }
-    */
 }
