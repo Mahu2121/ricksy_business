@@ -44,8 +44,12 @@ public class CreditCard {
         this.credit = credit.credit() - 500.0;
     }
 
-    public void payPack(CreditCard credit) {
-        this.credit = credit.credit() - 50.0;
+    public void payPack(CreditCard credit, double packCost) {
+        this.credit = credit.credit() - packCost;
+    }
+
+    public void payMenu(CreditCard credit,int menuCost) {
+        this.credit = credit.credit() - menuCost;
     }
 
     public void pay(double money) {
