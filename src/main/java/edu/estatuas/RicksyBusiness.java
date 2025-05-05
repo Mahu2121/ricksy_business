@@ -232,14 +232,41 @@ public class RicksyBusiness {
          * invitados/as que han hecho un pedido.
          */
 
+        System.out.println("\nRickMenus\n" +
+                "==========================================");
+
         // tu código aquí
 
-        
+        RickMenu menu  = new RickMenu(10, 100);
+
+        menu.dispatch(birdpearson);
+        mostrarMenus(birdpearson,menu,ufosPark);
+
+        menu.dispatch(abradolph);
+        mostrarMenus(abradolph,menu,ufosPark);
+
+        menu.dispatch(squanchy);
+        mostrarMenus(squanchy,menu,ufosPark);
+
+        menu.dispatch(morty);
+        mostrarMenus(morty,menu,ufosPark);
+
+        menu.dispatch(gearHead);
+        mostrarMenus(gearHead,menu,ufosPark);
+
     }
     private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
         System.out.println(card);
         System.out.println("Packs: " + expender.stock());
         System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
+    }
+
+    private static void mostrarMenus(CreditCard card,RickMenu menu, UfosPark ufos) {
+        System.out.println(card);
+        System.out.println("Menus: " + menu.getMenuStock());
+        System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
+        System.out.println("\n");
+
     }
 
 }
