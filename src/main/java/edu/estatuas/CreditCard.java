@@ -12,15 +12,15 @@ public class CreditCard {
         this.number = number;
     }
 
-    private String getName() {
+    public String getName() {
         return name;
     }
 
-    private String getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    private double getCredit() {
+    public double getCredit() {
         return credit;
     }
 
